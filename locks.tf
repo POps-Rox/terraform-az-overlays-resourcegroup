@@ -5,8 +5,8 @@
 # Resource Group Lock configuration - Default (required). 
 #------------------------------------------------------------
 resource "azurerm_management_lock" "resource_group_level_lock" {
-  count      = var.enable_resource_locks ? 1 : 0
-  
+  count = var.enable_resource_locks ? 1 : 0
+
   name       = "${local.rg_name}-${var.lock_level}-lock"
   scope      = azurerm_resource_group.main_rg.id
   lock_level = var.lock_level
