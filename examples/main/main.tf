@@ -67,7 +67,7 @@ variable "use_location_short_name" {
 # CREATE THE RG
 # ---------------
 module "rg" {
-  source = "github.com/POps-Rox/tf-az-overlays-resourcegroup"
+  source = "../../"
 
   // Resource group name and location
   location                = var.location # This is the short location name (e.g. "eus")
