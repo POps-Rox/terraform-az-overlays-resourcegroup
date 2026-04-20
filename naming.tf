@@ -1,4 +1,4 @@
-data "popsrox_utils_resource_name" "rg" {
+data "popsrox_resource_name" "rg" {
   name          = var.workload_name
   resource_type = "azurerm_resource_group"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azure_region_lookup.location_short : var.location]
