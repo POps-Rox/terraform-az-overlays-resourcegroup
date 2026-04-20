@@ -8,17 +8,17 @@
 
 # Azure Resource Group Overlay
 
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![MIT License](https://img.shields.io/badge/license-MIT%20V2-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/azurenoops/overlays-resource-group/azurerm/)
+[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![MIT License](https://img.shields.io/badge/license-MIT%20V2-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/POps-Rox/overlays-resource-group/azurerm/)
 
 Azure NoOps Accelerator terraform module that creates a Resource Group with optional resource lock that can be used with a [SCCA compliant Network]().
 
 ## Naming
 
-Resource naming is based on the [Azure NoOps Accelerator Naming Utils](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/resources/azurenoopsutils_resource_name) to generate resource names.
+Resource naming is based on the [POps-Rox Naming Utils](https://registry.terraform.io/providers/POps-Rox/popsrox-utils/latest/docs/resources/popsrox_utils_resource_name) to generate resource names.
 
 ## AZ Regions Lookup
 
-This module uses the [AZ Regions Lookup](https://registry.terraform.io/modules/azurenoops/overlays-azregions-lookup/azurerm) module to lookup the short name for the Azure region.
+This module uses the [AZ Regions Lookup](https://registry.terraform.io/modules/POps-Rox/overlays-azregions-lookup/azurerm) module to lookup the short name for the Azure region.
 
 ## Usage
 
@@ -47,14 +47,14 @@ module "mod_rg" {
 
 | Name | Version |
 |------|---------|
-| azurenoops | ~> 1.0 |
+| POps-Rox/popsrox-utils | ~> 1.0 |
 | azurerm | >= 1.32 |
 
 ## Modules
 
 | Name | Version |
 |------|---------|
-| azurenoops/overlays-azregions-lookup/azurerm | ~> 1.0 |
+| POps-Rox/overlays-azregions-lookup/azurerm | ~> 1.0 |
 
 ## Resources
 
@@ -62,7 +62,7 @@ module "mod_rg" {
 |------|------|
 | [azurerm_management_lock.resource_group_level_lock](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_lock) | resource |
 | [azurerm_resource_group.main_rg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) | resource |
-| [azurenoopsutils_resource_name.rg](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/azurenoopsutils_resource_name) | data source |
+| [popsrox_utils_resource_name.rg](https://registry.terraform.io/providers/POps-Rox/popsrox-utils/latest/docs/data-sources/popsrox_utils_resource_name) | data source |
 
 ## Inputs
 
