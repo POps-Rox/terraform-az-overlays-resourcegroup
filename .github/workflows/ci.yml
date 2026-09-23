@@ -89,7 +89,7 @@ jobs:
         run: tflint --recursive --format compact --minimum-failure-severity=error
 
   terraform-test:
-    name: "🧪 Functional Tests"
+    name: "🧪 Terraform Test"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
